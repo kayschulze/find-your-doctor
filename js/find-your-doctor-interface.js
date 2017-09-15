@@ -7,8 +7,9 @@ $(function() {
     event.preventDefault();
     $('.output').text("");
 
-    let newDoctorSearch = new DoctorSearch();
-
-  
+    let newMedicalCondition = $('#medicalConditionInput').val();
+    $('#medicalConditionInput').val("");
+    let newDoctorSearch = new DoctorSearch(newMedicalCondition);
+    newDoctorSearch.searchMedicalIssue();
   });
 });
